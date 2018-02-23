@@ -14,6 +14,10 @@ describe("ts service", () => {
     assert.strictEqual(simple_service_pb_service.SimpleService.DoUnary.requestType, simple_service_pb.UnaryRequest);
     assert.strictEqual(simple_service_pb_service.SimpleService.DoUnary.responseType, external_child_message_pb.ExternalChildMessage);
     assert.strictEqual(simple_service_pb_service.SimpleService.DoUnary.path, "/examplecom.SimpleService/DoUnary");
+    assert.isDefined(simple_service_pb_service.SimpleService.DoUnary.requestSerialize);
+    assert.isDefined(simple_service_pb_service.SimpleService.DoUnary.requestDeserialize);
+    assert.isDefined(simple_service_pb_service.SimpleService.DoUnary.responseSerialize);
+    assert.isDefined(simple_service_pb_service.SimpleService.DoUnary.responseDeserialize);
 
     assert.strictEqual(simple_service_pb_service.SimpleService.DoStream.methodName, "DoStream");
     assert.strictEqual(simple_service_pb_service.SimpleService.DoStream.service, simple_service_pb_service.SimpleService);
@@ -22,5 +26,9 @@ describe("ts service", () => {
     assert.strictEqual(simple_service_pb_service.SimpleService.DoStream.requestType, simple_service_pb.StreamRequest);
     assert.strictEqual(simple_service_pb_service.SimpleService.DoStream.responseType, external_child_message_pb.ExternalChildMessage);
     assert.strictEqual(simple_service_pb_service.SimpleService.DoStream.path, "/examplecom.SimpleService/DoStream");
+    assert.isDefined(simple_service_pb_service.SimpleService.DoStream.requestSerialize);
+    assert.isDefined(simple_service_pb_service.SimpleService.DoStream.requestDeserialize);
+    assert.isDefined(simple_service_pb_service.SimpleService.DoStream.responseSerialize);
+    assert.isDefined(simple_service_pb_service.SimpleService.DoStream.responseDeserialize);
   });
 });
