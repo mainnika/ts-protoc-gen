@@ -20,6 +20,7 @@ export function printFileDescriptorTSServices(fileDescriptor: FileDescriptorProt
   const printer = new Printer(0);
   printer.printLn(`// package: ${packageName}`);
   printer.printLn(`// file: ${fileDescriptor.getName()}`);
+  printer.printLn(`// tslint:disable`);
   printer.printEmptyLn();
 
   // Need to import the non-service file that was generated for this .proto file

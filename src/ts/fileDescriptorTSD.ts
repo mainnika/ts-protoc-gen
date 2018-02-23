@@ -15,6 +15,7 @@ export function printFileDescriptorTSD(fileDescriptor: FileDescriptorProto, expo
 
   printer.printLn(`// package: ${packageName}`);
   printer.printLn(`// file: ${fileDescriptor.getName()}`);
+  printer.printLn(`// tslint:disable`);
 
   const upToRoot = getPathToRoot(fileName);
 
